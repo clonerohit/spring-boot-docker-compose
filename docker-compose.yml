@@ -1,0 +1,19 @@
+version: '3'
+services:
+    springboot:
+        container_name: spring-boot-app
+        image: 100598/spring-boot-app:1.0
+        ports: 
+        - 8080:8080
+    mysql:
+        container_name: db
+        image: mysql:5.7
+        environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_USER=root
+        - MYSQL_PASSWORD=root
+        - MYSQL_DATABASE=testdb
+        volumes:
+        - appvolume:/var/lib/mysql
+volumes:
+    appvolume:
