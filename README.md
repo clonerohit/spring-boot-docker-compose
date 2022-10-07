@@ -8,7 +8,7 @@ You can expose your application in various ways, NodePort and LoadBalancer are t
 Clone the below project.
 
 ```
-https://github.com/clonerohit/spring-boot-docker-compose.git
+https://github.com/rowhyt/spring-boot-docker-compose.git
 ```
 
 After pulling the repository. You will see in the application.properties that there are no database configurations being hardcoded which means if you want to change something then you have to do it in the deployments files and thus everything becomes loosely coupled and easy to replace.
