@@ -39,13 +39,13 @@ To run the application, you need to perform certain steps:
 2. Build the docker image using the Dockerfile with the below command:
 
 ```
-docker build -t {enter-your-dockerhub-username}/spring-boot-app:1.0 .
+docker build -t {enter-your-dockerhub-username}/spring-boot-docker-compose:1.0 .
 ```
 
 3. Push the same image which you have generated on the Docker Hub using below command:
 
 ```
-docker push {enter-your-dockerhub-username}/spring-boot-app:1.0
+docker push {enter-your-dockerhub-username}/spring-boot-docker-compose:1.0
 ```
 
 Note: It will ask for the username and password of your Docker Hub account.
@@ -107,7 +107,7 @@ minikube ip
 This will give you the IP address and add this IP and DNS name in the hosts files in this way.
 
 ```
-19X.XXX.43.2   spring-boot.com
+19X.XXX.43.2   spring-boot-docker-compose.com
 ```
 
 Now, go to the browser and type in this DNS name and your app will run successfully.

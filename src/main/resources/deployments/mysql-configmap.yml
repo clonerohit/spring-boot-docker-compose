@@ -4,4 +4,4 @@ metadata:
   name: mysql-configuration
 data:
  host: mysql
- name: testdb
+ name: demo

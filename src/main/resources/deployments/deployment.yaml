@@ -1,9 +1,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: spring-boot-app
+  name: spring-boot-docker-compose
   labels:
-    name: spring-boot-app
+    name: spring-boot-docker-compose
 spec:
   ports:
     - nodePort: 30164 
@@ -11,27 +11,27 @@ spec:
       targetPort: 8080  
       protocol: TCP
   selector:           
-    app: spring-boot-app
+    app: spring-boot-docker-compose
   type: LoadBalancer       
 
 ---
 apiVersion: apps/v1 
 kind: Deployment    
 metadata:              
-  name: spring-boot-app
+  name: spring-boot-docker-compose
 spec:                
   selector:         
     matchLabels:
-      app: spring-boot-app
+      app: spring-boot-docker-compose
   replicas: 1      
   template:
     metadata:
       labels:        
-        app: spring-boot-app
+        app: spring-boot-docker-compose
     spec:
       containers:
-        - name: spring-boot-app
-          image: 100598/spring-boot-app:1.0
+        - name: spring-boot-docker-compose
+          image: {hub-username}/spring-boot-docker-compose:1.0
           ports:
             - containerPort: 8080                
           env:   # Setting Enviornmental Variables
